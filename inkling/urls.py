@@ -16,9 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
+from rest_framework.routers import DefaultRouter
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('projects/', views.ProjectList.as_view(), name='project_list'),
+    path('documents/', views.DocumentList.as_view(), name='document_list'),
+    path('projects/<int:pk>', views.ProjectDetail.as_view(), name='project_detail'),
+    path('documents/<int:pk>',  views.DocumentDetail.as_view(), name='document_detail')
 ]
