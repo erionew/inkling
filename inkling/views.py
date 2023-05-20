@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .serializers import ProjectSerializer
+from .models import Project
 
-def index(req):
-    return render(req, 'index.html')
+class ProjectList(generics.ListCreateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
