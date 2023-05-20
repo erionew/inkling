@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'inkling'
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'inkling.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postrgesl',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'neondb',
         'USER': 'erionew',
         'PASSWORD': 'qVzOiQ0f3NPe',
