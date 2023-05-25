@@ -93,7 +93,7 @@ DATABASES = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'http://erionew.github.io/writing-app/'
+    'http://erionew.github.io'
 ]
 
 
