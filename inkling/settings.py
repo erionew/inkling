@@ -96,9 +96,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://erionew.github.io'
 ]
 
-CORS_ALLOWED_ORIGINS = ['*']
-
-CSRF_TRUSTED_ORIGINS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True  
 
 
 # Password validation
