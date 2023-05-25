@@ -29,7 +29,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CORS_ORIGIN_ALLOW_ALL = True  
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://erionew.github.io'
+]
+CORS_ALLOW_CREDENTIALS = False
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,6 +49,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -91,12 +98,7 @@ DATABASES = {
     }
 }
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://erionew.github.io'
-]
 
-CORS_ORIGIN_ALLOW_ALL = True  
 
 
 # Password validation
