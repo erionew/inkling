@@ -10,6 +10,7 @@ class Project(models.Model):
 class Document(models.Model):
     title = models.CharField(max_length=250)
     project= models.ForeignKey(Project, on_delete=models.CASCADE, related_name='project')
+    content = models.CharField(default = '')
 
     def __str__(self):
         return self.title
